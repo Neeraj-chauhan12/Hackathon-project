@@ -3,6 +3,10 @@ import { IoMdTime } from "react-icons/io";
 import { MdMenuBook } from "react-icons/md";
 import { IoCode } from "react-icons/io5";
 import { MdIncompleteCircle } from "react-icons/md";
+import { FaStreetView } from "react-icons/fa";
+import { FaHandsAslInterpreting } from "react-icons/fa6";
+import { FaFire } from "react-icons/fa";
+import {} from 'cally'
 
 const Profile = () => {
 
@@ -31,6 +35,32 @@ const Profile = () => {
             head:"Most study ",
             mid:"programming"
         },
+        
+           {
+            id:5,
+            icon:<FaStreetView />,
+            head:"Active days",
+            mid:"12"
+        },
+           {
+            id:6,
+            icon:<FaFire />,
+            head:"Max Streak",
+            mid:"26 days"
+        },
+        
+           {
+            id:7,
+            icon:<FaHandsAslInterpreting />,
+            head:"More prefer",
+            mid:"DSA"
+        },
+           {
+            id:8,
+            icon:<IoCode />,
+            head:"Last year study ",
+            mid:"150days"
+        },
     ]
 
   return (
@@ -49,19 +79,25 @@ const Profile = () => {
             <h1>7</h1>
          </div>
              <div className='overflow-y-scroll '>
-                  <progress className="progress progress-success h-7  my-2 w-full" value="80" max="100"></progress>
-            <progress className="progress progress-success h-7 w-full my-2" value="56" max="100"></progress>
-            <progress className="progress progress-success h-7 w-full my-2" value="70" max="100"></progress>
-            <progress className="progress progress-success h-7 w-full my-2" value="80" max="100"></progress>
-            <progress className="progress progress-success h-7 w-full my-2" value="90" max="100"></progress>
-            <progress className="progress progress-success h-7  w-full my-2" value="80" max="100"></progress>
-            <progress className="progress progress-success h-7 w-full my-2" value="0" max="100"></progress>
-                <progress className="progress progress-success h-7 w-full my-2" value="56" max="100"></progress>
-            <progress className="progress progress-success h-7 w-full my-2" value="70" max="100"></progress>
-            <progress className="progress progress-success h-7 w-full my-2" value="80" max="100"></progress>
-            <progress className="progress progress-success h-7 w-full my-2" value="90" max="100"></progress>
-            <progress className="progress progress-success h-7  w-full my-2" value="80" max="100"></progress>
-            <progress className="progress progress-success h-7 w-full my-2" value="0" max="100"></progress>
+                  <progress className="progress progress-secondary w-full h-5 my-2" value="10" max="100"></progress>
+                  <progress className="progress progress-secondary w-full h-5 my-2" value={0} max="100"></progress>
+                   <progress className="progress progress-secondary w-full h-5 my-2" value="40" max="100"></progress>
+                   <progress className="progress progress-secondary w-full h-5 my-2" value="70" max="100"></progress>
+                   <progress className="progress progress-secondary w-full h-5 my-2" value="100" max="100"></progress>
+                   <progress className="progress progress-secondary w-full h-5 my-2" value="10" max="100"></progress>
+                   <progress className="progress progress-secondary w-full h-5 my-2" value="40" max="100"></progress>
+                   <progress className="progress progress-secondary w-full h-5 my-2" value="70" max="100"></progress>
+                   <progress className="progress progress-secondary w-full h-5 my-2" value="100" max="100"></progress>
+                     <progress className="progress progress-secondary w-full h-5 my-2" value="100" max="100"></progress>
+                   <progress className="progress progress-secondary w-full h-5 my-2" value="10" max="100"></progress>
+                   <progress className="progress progress-secondary w-full h-5 my-2" value="40" max="100"></progress>
+                   <progress className="progress progress-secondary w-full h-5 my-2" value="70" max="100"></progress>
+                   <progress className="progress progress-secondary w-full h-5 my-2 " value="100" max="100"></progress>
+                       <progress className="progress progress-secondary w-full h-5 my-2" value="100" max="100"></progress>
+                   <progress className="progress progress-secondary w-full h-5 my-2" value="10" max="100"></progress>
+                   <progress className="progress progress-secondary w-full h-5 my-2" value="40" max="100"></progress>
+                   <progress className="progress progress-secondary w-full h-5 my-2" value="70" max="100"></progress>
+                   <progress className="progress progress-secondary w-full h-5 my-2 " value="100" max="100"></progress>
             
 
              </div>
@@ -71,6 +107,21 @@ const Profile = () => {
         </div>
 
         <div className='h-screen w-1/2 bg-linear-to-r/srgb from-indigo-500 to-teal-400 justify-center items-center gap-x-16 flex flex-wrap '>
+  
+
+<calendar-date class="cally bg-base-100 border border-base-300 shadow-lg rounded-box">
+  <svg aria-label="Previous" className="fill-current size-4" slot="previous" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M15.75 19.5 8.25 12l7.5-7.5"></path></svg>
+  <svg aria-label="Next" className="fill-current size-4" slot="next" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path></svg>
+  <calendar-month></calendar-month>
+</calendar-date>
+        
+        
+        
+
+        </div>
+    </div>
+
+    <div className='h-screen w-screen bg-linear-to-r/srgb from-indigo-500 to-teal-400 justify-center items-center gap-x-16 flex flex-wrap' >
         {
             data.map(({id,icon,head,mid})=>{
                 return(
@@ -87,8 +138,6 @@ const Profile = () => {
                 )
             })
         }
-
-        </div>
     </div>
       
     </>
